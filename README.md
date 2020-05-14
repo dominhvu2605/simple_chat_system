@@ -6,5 +6,5 @@ name DB: simple_chat_system
 table feeds:
 
 <div align="center">
-    <img src="table_feed" width="400px"</img> 
+    <img src="../image/table_feed.png"</img> 
 </div>
