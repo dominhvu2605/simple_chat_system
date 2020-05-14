@@ -1,0 +1,41 @@
+version: "3.2"
+services:
+  php:
+    build: './php/'
+    networks:
+      - backend
+    volumes:
+      - ./cakephp/:/var/www/html/
+  apache:
+    build: './apache/'
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - backend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./cakephp/:/var/www/html/
+  mysql:
+    image: mysql
+    networks:
+      - backend
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    networks:
+      - backend
+    links:
+      - mysql
+    environment: 
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - "8081:80"
+    restart: always
+networks:
+  backend:
