@@ -5,4 +5,4 @@ name DB: simple_chat_system
 
 table feeds:
 
-<img src="image/table_feed.png" height="400" alt="Screenshot"/>
+<img src="image/table_feed.png" height="400" alt="table_feed"/>
