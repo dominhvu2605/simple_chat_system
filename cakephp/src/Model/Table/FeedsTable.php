@@ -32,7 +32,7 @@ class FeedsTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('feeds');
+        $this->setTable('feed');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
     }

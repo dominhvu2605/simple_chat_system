@@ -56,7 +56,7 @@ class FeedsController extends AppController
             $this->Flash->error(__('The feed could not be deleted. Please, try again.'));
         }
 
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect(['action' => 'feed']);
     }
 
     public function feed()
